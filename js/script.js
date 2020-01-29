@@ -9,7 +9,33 @@ $(document).ready(function() {
   };
   for (var key in student) {
     console.log(key + ': ' + student[key]);
-    $('#student').append(key + ': ' + student[key] + ' / ');
+    $('#student').append(key + ': ' + student[key] + '<br>');
 
+  };
+  //Creare un array di oggetti di studenti. Ciclare su tutti gli studenti e stampare per ognuno nome e cognome
+  var students = [
+    {
+      titolo: 'STUDENTE',
+      name: 'Peter',
+      surname: 'Parker',
+      age: '33'
+    },
+    {
+      titolo: 'STUDENTE',
+      name: 'Tony',
+      surname: 'Stark',
+      age: '37'
+    },
+    {
+      titolo: 'STUDENTE',
+      name: 'Bruce',
+      surname: 'Banner',
+      age: '39'
+    }
+  ]
+  for (var i = 0; i < students.length; i++) {
+    var student = students[i]
+    console.log('name: ' + student.name + 'surname:' + student.surname);
+    $('#students').append(student.titolo + '<br>'  + 'name: ' + student.name + '<br>' + 'surname:' + student.surname + '<br>' );
   }
 });
