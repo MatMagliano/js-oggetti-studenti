@@ -12,6 +12,7 @@ $(document).ready(function() {
     $('#student').append(key + ': ' + student[key] + '<br>');
 
   };
+
   //Creare un array di oggetti di studenti. Ciclare su tutti gli studenti e stampare per ognuno nome e cognome
   var students = [
     {
@@ -37,5 +38,16 @@ $(document).ready(function() {
     var student = students[i]
     console.log('name: ' + student.name + 'surname:' + student.surname);
     $('#students').append(student.titolo + '<br>'  + 'name: ' + student.name + '<br>' + 'surname:' + student.surname + '<br>' );
+  };
+
+  // Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
+  var inserimento = {
+    name: prompt('Inserisci il nome:'),
+    surname: prompt('Inserisci il cognome:'),
+    age: parseInt(prompt('Inserisci il nome:'))
   }
+for (var key in inserimento) {
+  console.log(key + ': ' + inserimento[key]);
+    $('#new_student').append(key + ': ' + inserimento[key] + '<br>');
+};
 });
